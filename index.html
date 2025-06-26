@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cardápio Digital</title>
+  <link rel="stylesheet" href="css/moderno.css" />
+</head>
+<body>
+  <header>
+    <h1>WELLINGTON LANCHES</h1>
+  </header>
+
+  <main>
+    <section class="categoria">
+      <h2>Lanches</h2>
+
+      <!-- X-Salada -->
+      <div class="item">
+        <img src="image/x-salada.png" alt="X-Salada" />
+        <div class="info">
+          <h3>X-Salada</h3>
+          <p>Hambúrguer, queijo, alface, tomate e maionese.</p>
+          <span class="preco">R$ 13,00</span>
+          <div class="controle">
+            <button onclick="adicionar('X-Salada', 13)">+</button>
+            <span id="quant-X-Salada" class="contador">0</span>
+            <button onclick="remover('X-Salada', 13)">–</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- X-Bacon -->
+      <div class="item">
+        <img src="image/x-bacon.png" alt="X-Bacon" />
+        <div class="info">
+          <h3>X-Bacon</h3>
+          <p>Hambúrguer, queijo, bacon crocante e maionese.</p>
+          <span class="preco">R$ 14,00</span>
+          <div class="controle">
+            <button onclick="adicionar('X-Bacon', 14)">+</button>
+            <span id="quant-X-Bacon" class="contador">0</span>
+            <button onclick="remover('X-Bacon', 14)">–</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- X-Tudo -->
+      <div class="item">
+        <img src="image/x-tudo.png" alt="X-Tudo" />
+        <div class="info">
+          <h3>X-Tudo</h3>
+          <p>Hambúrguer, queijo, presunto, ovo, bacon, salada e batata palha.</p>
+          <span class="preco">R$ 18,00</span>
+          <div class="controle">
+            <button onclick="adicionar('X-Tudo', 18)">+</button>
+            <span id="quant-X-Tudo" class="contador">0</span>
+            <button onclick="remover('X-Tudo', 18)">–</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Misto Quente -->
+      <div class="item">
+        <img src="image/pao.png" alt="Misto Quente" />
+        <div class="info">
+          <h3>Misto Quente</h3>
+          <p>Pão francês com presunto e queijo derretido.</p>
+          <span class="preco">R$ 8,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Misto Quente', 8)">+</button>
+            <span id="quant-Misto Quente" class="contador">0</span>
+            <button onclick="remover('Misto Quente', 8)">–</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cachorro-Quente -->
+      <div class="item">
+        <img src="image/cachorro_quente.png" alt="Cachorro-Quente" />
+        <div class="info">
+          <h3>Cachorro-Quente</h3>
+          <p>Salsicha, molho, milho, batata palha e ketchup.</p>
+          <span class="preco">R$ 10,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Cachorro-Quente', 10)">+</button>
+            <span id="quant-Cachorro-Quente" class="contador">0</span>
+            <button onclick="remover('Cachorro-Quente', 10)">–</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categoria">
+      <h2>Porções</h2>
+
+      <!-- Batata Frita -->
+      <div class="item">
+        <img src="image/fritas.png" alt="Batata Frita" />
+        <div class="info">
+          <h3>Batata Frita</h3>
+          <p>Crocante e douradinha!</p>
+          <span class="preco">R$ 15,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Batata Frita', 15)">+</button>
+            <span id="quant-Batata Frita" class="contador">0</span>
+            <button onclick="remover('Batata Frita', 15)">–</button>
+          </div>
+        </div>
+      </div>
+            <!-- Batata Frita Família -->
+      <div class="item">
+        <img src="image/Fritas_familia.png" alt="Batata Frita Família" />
+        <div class="info">
+          <h3>Batata Frita Família</h3>
+          <p>Crocante e douradinha!</p>
+          <span class="preco">R$ 40,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Batata Frita Família', 40)">+</button>
+            <span id="quant-Batata Frita Família" class="contador">0</span>
+            <button onclick="remover('Batata Frita Família', 40)">–</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mandioca Frita -->
+      <div class="item">
+        <img src="image/mandioca_frita.png" alt="Mandioca Frita" />
+        <div class="info">
+          <h3>Mandioca Frita</h3>
+          <p>Macaxeira frita no capricho.</p>
+          <span class="preco">R$ 16,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Mandioca Frita', 16)">+</button>
+            <span id="quant-Mandioca Frita" class="contador">0</span>
+            <button onclick="remover('Mandioca Frita', 16)">–</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mandioca Família -->
+      <div class="item">
+        <img src="image/Mandio_Familia.png" alt="Mandioca Família" />
+        <div class="info">
+          <h3>Mandioca Família</h3>
+          <p>Macaxeira grande no capricho.</p>
+          <span class="preco">R$ 25,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Mandioca Família', 25)">+</button>
+            <span id="quant-Mandioca Família" class="contador">0</span>
+            <button onclick="remover('Mandioca Família', 25)">–</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calabresa Acebolada -->
+      <div class="item">
+        <img src="image/calabresa.png" alt="Calabresa Acebolada" />
+        <div class="info">
+          <h3>Calabresa Acebolada</h3>
+          <p>Com cebola douradinha e limão.</p>
+          <span class="preco">R$ 18,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Calabresa Acebolada', 18)">+</button>
+            <span id="quant-Calabresa Acebolada" class="contador">0</span>
+            <button onclick="remover('Calabresa Acebolada', 18)">–</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categoria">
+      <h2>Espetinhos</h2>
+
+      <!-- Espetinho de Carne -->
+      <div class="item">
+        <img src="image/espetinho_Carne.png" alt="Espetinho de Carne" />
+        <div class="info">
+          <h3>Espetinho de Carne</h3>
+          <p>Alcatra no espeto</p>
+          <span class="preco">R$ 7,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Espetinho de Carne', 7)">+</button>
+            <span id="quant-Espetinho de Carne" class="contador">0</span>
+            <button onclick="remover('Espetinho de Carne', 7)">–</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Espetinho de Frango -->
+      <div class="item">
+        <img src="image/espetinhoF.png" alt="Espetinho de Frango" />
+        <div class="info">
+          <h3>Espetinho de Frango</h3>
+          <p>Peito no espeto</p>
+          <span class="preco">R$ 6,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Espetinho de Frango', 6)">+</button>
+            <span id="quant-Espetinho de Frango" class="contador">0</span>
+            <button onclick="remover('Espetinho de Frango', 6)">–</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Espetinho Completo -->
+      <div class="item">
+        <img src="image/espetinho_completo.png" alt="Espetinho Completo" />
+        <div class="info">
+          <h3>Espetinho Completo</h3>
+          <p>Carne com mandioca e farofa</p>
+          <span class="preco">R$ 9,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Espetinho Completo', 9)">+</button>
+            <span id="quant-Espetinho Completo" class="contador">0</span>
+            <button onclick="remover('Espetinho Completo', 9)">–</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Espetinho Frango Completo -->
+      <div class="item">
+        <img src="image/espetinho_frango.png" alt="Frango com Legumes" />
+        <div class="info">
+          <h3>Frango com Legumes</h3>
+          <p>Frango, mandioca e farofa</p>
+          <span class="preco">R$ 8,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Frango com Legumes', 8)">+</button>
+            <span id="quant-Frango com Legumes" class="contador">0</span>
+            <button onclick="remover('Frango com Legumes', 8)">–</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categoria">
+      <h2>Bebidas</h2>
+
+      <div class="item">
+        <img src="image/coca_lata.png" alt="Coca-Cola Lata" />
+        <div class="info">
+          <h3>Coca-Cola Lata</h3>
+          <p>350ml</p>
+          <span class="preco">R$ 5,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Coca-Cola Lata', 5)">+</button>
+            <span id="quant-Coca-Cola Lata" class="contador">0</span>
+            <button onclick="remover('Coca-Cola Lata', 5)">–</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fanta Laranja 350ml -->
+      <div class="item">
+        <img src="image/fanta_lata.png" alt="Fanta Laranja Lata" />
+        <div class="info">
+          <h3>Fanta Laranja Lata</h3>
+          <p>350ml</p>
+          <span class="preco">R$ 5,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Fanta Laranja Lata', 5)">+</button>
+            <span id="quant-Fanta Laranja Lata" class="contador">0</span>
+            <button onclick="remover('Fanta Laranja Lata', 5)">–</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guaraná Lata -->
+      <div class="item">
+        <img src="image/guarana.png" alt="Guaraná Lata" />
+        <div class="info">
+          <h3>Guaraná Antarctica Lata</h3>
+          <p>350ml</p>
+          <span class="preco">R$ 5,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Guaraná Lata', 5)">+</button>
+            <span id="quant-Guaraná Lata" class="contador">0</span>
+            <button onclick="remover('Guaraná Lata', 5)">–</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coca-Cola 1L -->
+      <div class="item">
+        <img src="image/coca1l.png" alt="Coca-Cola 1 Litro" />
+        <div class="info">
+          <h3>Coca-Cola 1 Litro</h3>
+          <p>Para dividir com a galera!</p>
+          <span class="preco">R$ 9,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Coca-Cola 1L', 9)">+</button>
+            <span id="quant-Coca-Cola 1L" class="contador">0</span>
+            <button onclick="remover('Coca-Cola 1L', 9)">–</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fanta Laranja 1L -->
+      <div class="item">
+        <img src="image/fanta1l.png" alt="Fanta Laranja 1L" />
+        <div class="info">
+          <h3>Fanta Laranja 1 Litro</h3>
+          <p>Ideal para matar a sede da família!</p>
+          <span class="preco">R$ 9,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Fanta Laranja 1L', 9)">+</button>
+            <span id="quant-Fanta Laranja 1L" class="contador">0</span>
+            <button onclick="remover('Fanta Laranja 1L', 9)">–</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guaraná Antarctica 1L -->
+      <div class="item">
+        <img src="image/guarana1l.png" alt="Guaraná Antarctica 1L" />
+        <div class="info">
+          <h3>Guaraná Antarctica 1 Litro</h3>
+          <p>Clássico gelado, para compartilhar.</p>
+          <span class="preco">R$ 9,00</span>
+          <div class="controle">
+            <button onclick="adicionar('Guaraná 1L', 9)">+</button>
+            <span id="quant-Guaraná 1L" class="contador">0</span>
+            <button onclick="remover('Guaraná 1L', 9)">–</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUMO DO PEDIDO -->
+    <section class="categoria">
+      <h2>Resumo do Pedido</h2>
+      <pre id="resumo" class="resumo-box">Carrinho vazio</pre>
+      <button onclick="limparCarrinho()" class="botao-limpar">Limpar Pedido</button>
+    </section>
+  </main>
+
+  <!-- BOTÃO DO WHATSAPP -->
+  <footer>
+    <div class="finalizar-pedido">
+      <button onclick="enviarPedido()" class="icone-whats-botao">
+        <img src="image/whatsapp-icon1.png" alt="WhatsApp" class="icone-whats" />
+      </button>
+      <p class="legenda">Finalizar Pedido</p>
+    </div>
+  </footer>
+
+  <script src="js/pedido.js"></script>
+</body>
+</html>
