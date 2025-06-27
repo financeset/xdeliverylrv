@@ -1,9 +1,41 @@
+/* 💻 ESTILO PADRÃO - DESKTOP FIRST */
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background: #fff9f2;
   color: #333;
   line-height: 1.6;
+}
+
+main {
+  padding-bottom: 0; /* controle de padding via classe no mobile/desktop */
+}
+
+@media (min-width: 768px) {
+  .conteudo-ajustado {
+    padding-bottom: 180px; /* espaço pro footer fixo no desktop */
+  }
+
+  #resumo .linha-item,
+  #resumo .total-geral {
+    display: block;
+    white-space: nowrap;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ff6347;
+    color: white;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-size: 0.85rem;
+    z-index: 997;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  }
 }
 
 header {
@@ -79,59 +111,20 @@ header {
   background: #28a428;
 }
 
-main {
-  padding-bottom: 140px;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #ff6347;
-  color: white;
-  padding: 0.8rem 1rem;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.9rem;
-}
-
-footer button {
-  background: white;
-  color: #ff6347;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-footer button:hover {
-  background: #ffe5e0;
-}
-
-.icone-whats {
-  width: 60px;
-  height: 60px;
-  max-width: 100%;
-  object-fit: contain;
-}
 #resumo {
   position: fixed;
-  right: 16px;
-  bottom: 90px;
+  bottom: 130px;
+  right: 30px;
   width: 260px;
   max-height: 50vh;
   overflow-y: auto;
-  padding: 1rem;
-  background: #fff9f2;
-  color: #333;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
-  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  background: #fff;
+  border-radius: 14px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
   z-index: 999;
 }
 
@@ -144,27 +137,181 @@ footer button:hover {
   margin-bottom: 0.5rem;
 }
 
-@media (max-width: 480px) {
-  #resumo {
-    width: 90%;
-    right: 5%;
-    left: 5%;
-    bottom: 80px;
-    font-size: 0.9rem;
-  }
+#resumo.resumo-vazio {
+  padding: 0.6rem 1rem;
+  background: #f5f5f5;
+  font-style: italic;
+  color: #888;
+  box-shadow: none;
 }
-.botao-limpar {
-  margin-top: 0.5rem;
-  background: #ff6347;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 8px;
+
+.botoes-resumo {
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  width: 260px;
+  display: flex;
+  gap: 10px;
+  z-index: 998;
+}
+
+.botoes-resumo button {
+  flex: 1;
+  padding: 10px 14px;
   font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
+.botao-limpar {
+  background: #ff6347;
+  color: white;
+}
+
 .botao-limpar:hover {
   background: #e5533f;
+}
+
+.botao-finalizar {
+  background: #32cd32;
+  color: white;
+}
+
+.botao-finalizar:hover {
+  background: #28a428;
+}
+
+.botao-whatsapp-compartilhar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 360px;
+  margin: 10px auto 0;
+}
+
+.botao-whatsapp-compartilhar:hover {
+  background-color: #1ebd5a;
+}
+
+/* 📱 MOBILE RESPONSIVO */
+
+@media (max-width: 767px) {
+  #resumo {
+    position: fixed;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+    z-index: 999;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: left;
+    white-space: normal;
+  }
+
+  #resumo .linha-item {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 0.95rem;
+  }
+
+  #resumo .total-geral {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.05rem;
+    color: #333;
+  }
+
+  .conteudo-ajustado {
+    padding-bottom: 120px; /* se resumo estiver vazio */
+  }
+
+  body.tem-resumo .conteudo-ajustado {
+    padding-bottom: 450px; /* se resumo estiver visível */
+  }
+
+  .botoes-resumo {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    width: 90%;
+    margin: 1rem auto 0;
+    z-index: 10;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .botoes-resumo button {
+    width: 85%;
+    max-width: 360px;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    color: #333;
+    box-shadow: inset 0 0 0 2px #ccc;
+  }
+
+  .botao-finalizar {
+    background-color: #32cd32;
+    color: white;
+    box-shadow: none;
+  }
+
+  .botao-limpar {
+    background-color: #ff6347;
+    color: white;
+    box-shadow: none;
+  }
+
+  .botao-limpar:hover {
+    background: #c74834;
+  }
+
+  .botao-finalizar:hover {
+    background: #28a428;
+  }
+
+  .botao-whatsapp-compartilhar {
+    position: static;
+    transform: none;
+    width: 50%;
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: #ff6347;
+    padding: 14px 16px;
+    z-index: 998;
+    box-shadow: none;
+  }
 }

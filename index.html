@@ -11,7 +11,8 @@
     <h1>WELLINGTON LANCHES</h1>
   </header>
 
-  <main>
+  <main id="conteudo-principal" class="conteudo-ajustado">
+
     <section class="categoria">
       <h2>Lanches</h2>
 
@@ -325,24 +326,29 @@
         </div>
       </div>
     </section>
+<!-- RESUMO DO PEDIDO -->
+<div id="resumo" class="resumo-box">
+  <!-- Aqui o JS vai injetar as linhas dos pedidos -->
+</div>
 
-    <!-- RESUMO DO PEDIDO -->
-    <section class="categoria">
-      <h2>Resumo do Pedido</h2>
-      <pre id="resumo" class="resumo-box">Carrinho vazio</pre>
-      <button onclick="limparCarrinho()" class="botao-limpar">Limpar Pedido</button>
-    </section>
-  </main>
+<footer>
+  <div class="botoes-resumo">
+    <button onclick="limparCarrinho()" class="botao-limpar">Limpar Pedido</button>
+    <button onclick="enviarPedido()" class="botao-finalizar">
+      <img src="image/whatsapp-icon1.png" alt="WhatsApp" style="width: 20px; vertical-align: middle; margin-right: 6px;">
+      Finalizar Pedido
+    </button>
+  </div>
 
-  <!-- BOTÃO DO WHATSAPP -->
-  <footer>
-    <div class="finalizar-pedido">
-      <button onclick="enviarPedido()" class="icone-whats-botao">
-        <img src="image/whatsapp-icon1.png" alt="WhatsApp" class="icone-whats" />
-      </button>
-      <p class="legenda">Finalizar Pedido</p>
-    </div>
-  </footer>
+  <a href="https://wa.me/?text=Confira%20meu%20pedido%20no%20XDelivery!%20https%3A%2F%2Fxdeliverylrv.netlify.app" 
+   target="_blank" 
+   class="botao-whatsapp-compartilhar">
+  <img src="image/whatsapp-icon1.png" alt="WhatsApp" style="width: 20px; vertical-align: middle; margin-right: 6px;">
+  Compartilhar </a>
+
+
+  <p>&copy; 2025 XDelivery. Todos os direitos reservados.</p>
+</footer>
 
   <script src="js/pedido.js"></script>
 </body>
